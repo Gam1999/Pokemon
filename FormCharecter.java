@@ -137,9 +137,8 @@ public class FormCharecter extends JFrame {
 		buttonNate.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent evt) {
 				
-				 // New Form
-				Form4Pokemon form3pokemon = new Form4Pokemon();	
-				
+				Form3Pokemon form3pokemon = new Form3Pokemon();
+
 				//Enter you character name
 				gameUI = form3pokemon.getContentPane();
         		gameUI.setLayout(new BorderLayout());
@@ -147,7 +146,7 @@ public class FormCharecter extends JFrame {
 				player = new UserName(JOptionPane.showInputDialog("Enter you character name"));
 
 				JLabel namelb = new JLabel("NAME: "+player.getUserName().toUpperCase());
-
+			
 				status = new JPanel();
 				status.setBounds(223, 67, 133, 92);
 				status.setLayout(new BoxLayout(status,BoxLayout.Y_AXIS));
@@ -156,8 +155,8 @@ public class FormCharecter extends JFrame {
 				status.add(namelb);gameUI.add(status,BorderLayout.NORTH);
 				gameUI.add(status,BorderLayout.NORTH);
 				form3pokemon.setVisible(true);
-	
-				 // Hide Current Form
+				 
+				// Hide Current Form
 				setVisible(false);
 				form3pokemon.setResizable(false);
 			}
